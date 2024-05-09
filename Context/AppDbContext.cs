@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using YoutubeProcorretor.Entities;
+using YoutubeProcorretor.Models;
 
 namespace YoutubeProcorretor.Context
 {

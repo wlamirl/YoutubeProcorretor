@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace YoutubeProcorretor.Entities
+namespace YoutubeProcorretor.Models
 {
     public class VideoModel
     {

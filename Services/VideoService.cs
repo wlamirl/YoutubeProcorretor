@@ -1,5 +1,5 @@
 using YoutubeProcorretor.Context;
-using YoutubeProcorretor.Entities;
+using YoutubeProcorretor.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace YoutubeProcorretor.Services
