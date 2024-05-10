@@ -6,6 +6,7 @@ using YoutubeProcorretor.Components;
 using YoutubeProcorretor.Context;
 using YoutubeProcorretor.Services;
 using YoutubeProcorretor.Services.Youtube;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,14 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddFluentUIComponents();
 
-var connectionString = builder.Configuration.GetConnectionString("Sqlite");
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlite(connectionString));
+// var connectionString = builder.Configuration.GetConnectionString("Sqlite");
+// builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlite(connectionString));
+
+var mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+                    options.UseMySql(mySqlConnection,
+                    ServerVersion.AutoDetect(mySqlConnection))); //,
 
 builder.Services.AddScoped<IVideoService, VideoService>();
 builder.Services.AddScoped<IYoutubeService, YoutubeService>();

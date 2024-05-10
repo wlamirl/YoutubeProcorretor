@@ -9,9 +9,19 @@
   <ItemGroup>
 	<PackageReference Include="Google.Apis.Auth" Version="1.67.0" />
 	<PackageReference Include="Google.Apis.YouTube.v3" Version="1.67.0.3358" />
-	<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+	<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  <PrivateAssets>all</PrivateAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  <PrivateAssets>all</PrivateAssets>
+	</PackageReference>
 	<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.*-* " />
   <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.*-* " />
+  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
   </ItemGroup>
 </Project>
