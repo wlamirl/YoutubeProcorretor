@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using YoutubeProcorretor.Models;
 
-namespace YoutubeProcorretor.Context
+namespace YoutubeProcorretor.Data
 {
     public class AppDbContext : DbContext
     {
