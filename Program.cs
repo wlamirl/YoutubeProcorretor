@@ -18,7 +18,8 @@ builder.Services.AddFluentUIComponents();
 // var connectionString = builder.Configuration.GetConnectionString("Sqlite");
 // builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlite(connectionString));
 
-var mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+var mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
                     options.UseMySql(mySqlConnection,
